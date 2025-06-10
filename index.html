@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+    hola mundo
+    <script>
+        console.log("Hola mundo desde JavaScript");
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("El DOM ha sido cargado completamente");
+        });
+        document.body.style.backgroundColor = "lightblue";
+        document.body.innerHTML += "<h1>¡Hola, mundo!</h1>";
+        const paragraph = document.createElement("p");
+        paragraph.textContent = "Este es un párrafo añadido dinámicamente.";
+        document.body.appendChild(paragraph);
+
+        const button = document.createElement("button");
+        button.textContent = "Haz clic aquí";
+        button.addEventListener("click", function () {
+            alert("¡Botón clickeado!");
+        });
+
+        document.body.appendChild(button);
+        const list = document.createElement("ul");
+        const items = ["Elemento 1", "Elemento 2", "Elemento 3"];
+        items.forEach(function (item) {
+            const listItem = document.createElement("li");
+            listItem.textContent = item;
+            list.appendChild(listItem);
+        });
+        document.body.appendChild(list);
+        const image = document.createElement("img");
+        image.src = "https://via.placeholder.com/150";
+        image.alt = "Imagen de ejemplo";
+
+        document.body.appendChild(image);
+        const link = document.createElement("a");
+        link.href = "https://www.example.com";
+        link.textContent = "Visita Example.com";
+        link.target = "_blank"; // Abrir en una nueva pestaña
+        document.body.appendChild(link);
+        const form = document.createElement("form");
+        form.innerHTML = `
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Enviar</button>
+        `;
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Evitar el envío del formulario
+            const name = document.getElementById("name").value;
+            alert(`¡Hola, ${name}!`);
+        });
+        document.body.appendChild(form);
+        const table = document.createElement("table");
+        table.innerHTML = `
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>25</td>
+            </tr>
+        `;
+
+    </script>
+    <ul>    
+        <li>Elemento de lista 1</li>
+        <li>Elemento de lista 2</li>
+        <li>Elemento de lista 3</li>
+        <li>Elemento de lista 4</li>
+    </ul>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>David</td>
+            <td>28</td>
+        </tr>
+    </table>
 </body>
+
 </html>
