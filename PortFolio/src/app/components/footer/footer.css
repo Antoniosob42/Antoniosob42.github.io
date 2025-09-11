@@ -1,0 +1,48 @@
+.footer {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0e76a8; /* Azul LinkedIn */
+}
+
+/* segundo enlace (GitHub) */
+.social-links a:nth-child(2):hover {
+  color: #6e5494; /* Morado GitHub */
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact i {
+  font-size: 1rem;
+}
+
+.contact:hover {
+  color: #0e76a8;
+}
