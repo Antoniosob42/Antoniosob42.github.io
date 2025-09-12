@@ -1,0 +1,14 @@
+<div class="tarjeta-proyecto">
+  <img [src]="proyecto().imagen" [alt]="proyecto().nombre" class="imagen-proyecto">
+    <h2>{{proyecto().nombre}}</h2>
+    <h2>{{proyecto().descripción}}</h2>
+
+    <h2 class="tecnologias">
+        @for(tec of proyecto().tecnologias;track tec){
+            <span class="tecnologia">{{tec}}</span>
+        }
+    </h2>
+
+
+    <button (click)="abrirPestañaProyecto(proyecto().urlGitHub)">Ver en Github</button>
+ </div>

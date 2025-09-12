@@ -1,0 +1,23 @@
+@if (imagenBoton()) {
+  <!-- Botón sólo icono -->
+  <button class="icon-button" (click)="handleClick()">
+    @if (ifFontAwesome()) {
+      <i [class]="imagenBoton()" style="color: white;"></i>
+    } @else {
+      <img [src]="imagenBoton()" [alt]="labelBoton()" class="button-image">
+    }
+  </button>
+} @else {
+  <!-- Botón normal con colorFondo -->
+  <button
+    class="general-button"
+    [style]="{
+       'background-color': colorFondo() || '#0e76a8',
+       'color': (colorFondo() === 'yellow') ? '#000' : '#fff'
+    }"
+    (click)="handleClick()"
+  >
+    <span class="button-placeholder"></span>
+    <span class="button-label">{{ labelBoton() }}</span>
+  </button>
+}

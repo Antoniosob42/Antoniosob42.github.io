@@ -1,0 +1,34 @@
+<header class="header">
+  <div class="header-content">
+    <div class="profile-pic">
+      <img src="assets/me.jpg" alt="Foto de Perfil">
+    </div>
+
+    <div class="intro-and-buttons">
+      <div class="intro-text">
+        <h1>Antonio Sobrino Martín</h1>
+        <p>Descripción Personal</p>
+      </div>
+
+      <div class="botonesHeader">
+        <app-boton-componente
+          [urlRedireccion]="'sobremi'"
+          [labelBoton]="'Sobre Mí...'"
+          [colorFondo]="'green'">
+        </app-boton-componente>
+
+        <app-boton-componente
+          [urlRedireccion]="'habilidades'"
+          [labelBoton]="'Habilidades...'"
+          [colorFondo]="'blue'">
+        </app-boton-componente>
+
+        <app-boton-componente
+          [urlRedireccion]="'portfolio'"
+          [labelBoton]="'PortFolio...'"
+          [colorFondo]="'black'">
+        </app-boton-componente>
+      </div>
+    </div>
+  </div>
+</header>
