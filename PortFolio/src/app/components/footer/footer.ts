@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
-
+import { Component,Input } from '@angular/core';
+import { Router } from '@angular/router';
+import {BotonComponente}from '../boton-componente/boton-componente';
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [BotonComponente],
   templateUrl: './footer.html',
   styleUrl: './footer.css'
 })

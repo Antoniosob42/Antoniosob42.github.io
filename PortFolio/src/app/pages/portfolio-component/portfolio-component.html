@@ -1,0 +1,5 @@
+<div class="portfolio-container">
+  @for (p of proyectos; track p.nombre) {
+    <app-tarjeta-proyecto-componente [proyecto]="p"></app-tarjeta-proyecto-componente>
+  }
+</div>
