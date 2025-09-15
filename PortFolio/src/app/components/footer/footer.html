@@ -1,21 +1,28 @@
 <footer class="footer">
   <div class="footer-content">
-    <div class="social-links">
-      <app-boton-componente
-        [imagenBoton]="'fab fa-linkedin'"
-        [urlRedireccion]="linkedinUrl"
-        [labelBoton]="'LinkedIn'"
-        [colorFondo]="'black'"
-      >
-      </app-boton-componente>
-      <app-boton-componente
-        [imagenBoton]="'fab fa-github'"
-        [urlRedireccion]="githubUrl"
-        [labelBoton]="'GitHub'"
-        [colorFondo]="'#333'"
-      >
-      </app-boton-componente>
+   <div class="social-links">
+  <app-boton-componente
+    [imagenBoton]="'fab fa-linkedin'"
+    [urlRedireccion]="linkedinUrl"
+    [labelBoton]="'LinkedIn'"
+    [colorFondo]="'black'"
+    [tamano]="34">
+  </app-boton-componente>
+
+  <app-boton-componente
+    [imagenBoton]="'fab fa-github'"
+    [urlRedireccion]="githubUrl"
+    [labelBoton]="'GitHub'"
+    [colorFondo]="'#333'"
+    [tamano]="34">
+  </app-boton-componente>
+</div>
+
+    <!-- nuevo bloque aviso -->
+    <div class="aviso-angular">
+      <small>Página web hecha con Angular</small>
     </div>
+
     <div class="contact" (click)="contactByEmail()">
       <span>¡Contáctame por correo!</span>
       <i class="fas fa-arrow-right"></i>

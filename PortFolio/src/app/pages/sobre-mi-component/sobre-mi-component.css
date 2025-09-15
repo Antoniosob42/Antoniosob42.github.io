@@ -1,0 +1,34 @@
+/* Contenedor del bloque Sobre mí */
+.sobre-mi-texto {
+  max-width: 900px;        /* ancho máximo */
+  margin: 0 auto;          /* centrado horizontal */
+  padding: 2rem 1rem;      /* espacio interior */
+  line-height: 1.6;        /* altura de línea */
+  color: #000000;          /* texto claro */
+  font-size: 1rem;         /* tamaño base */
+}
+
+/* Cada párrafo separado */
+.sobre-mi-texto p {
+  margin-bottom: 1rem;     /* separación entre párrafos */
+  text-align: justify;     /* texto justificado */
+}
+
+/* Negritas y énfasis */
+.sobre-mi-texto strong {
+  color: #0e76a8;          /* azul LinkedIn para resaltar */
+  font-weight: 600;
+}
+
+.sobre-mi-texto em {
+  font-style: italic;
+  color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sobre-mi-texto {
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}

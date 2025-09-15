@@ -1,6 +1,12 @@
 @if (imagenBoton()) {
-  <!-- Botón sólo icono -->
-  <button class="icon-button" (click)="handleClick()">
+  <!-- Botón sólo icono / imagen -->
+  <button
+    class="icon-button"
+    (click)="handleClick()"
+    [style.width.px]="tamano() || 160"
+    [style.height.px]="tamano() || 160"
+    [style.border]="tamano() === 160 ? '3px solid black' : 'none'"
+  >
     @if (ifFontAwesome()) {
       <i [class]="imagenBoton()" style="color: white;"></i>
     } @else {
@@ -11,13 +17,12 @@
   <!-- Botón normal con colorFondo -->
   <button
     class="general-button"
-    [style]="{
-       'background-color': colorFondo() || '#0e76a8',
-       'color': (colorFondo() === 'yellow') ? '#000' : '#fff'
-    }"
+    [style.width.px]="tamano()"
+    [style.height.px]="tamano()"
+    [style.background-color]="colorFondo() || '#0e76a8'"
+    [style.color]="getTextColor(colorFondo() || '#0e76a8')"
     (click)="handleClick()"
   >
-    <span class="button-placeholder"></span>
     <span class="button-label">{{ labelBoton() }}</span>
   </button>
 }

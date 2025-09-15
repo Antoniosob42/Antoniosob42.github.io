@@ -1,0 +1,29 @@
+footer,
+app-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  z-index: 999;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Área de contenido con padding inferior igual a la altura del footer */
+.main-content {
+  flex: 1;
+  padding-bottom: 80px; /* 👈 ajusta a la altura real del footer */
+  box-sizing: border-box;
+}
+
