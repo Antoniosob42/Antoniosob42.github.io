@@ -1,1 +1,8 @@
-<p>habilidades...</p>
+<div class="lista-habilidades">
+  @for (habilidad of habilidades; track habilidad.nombre) {
+    <app-habilidad-component
+      [nombre]="habilidad.nombre"
+      [competencia]="habilidad.competencia">
+    </app-habilidad-component>
+  }
+</div>

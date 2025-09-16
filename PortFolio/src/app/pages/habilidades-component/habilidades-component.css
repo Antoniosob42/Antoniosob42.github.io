@@ -1,0 +1,12 @@
+.lista-habilidades {
+  display: grid;
+  /* 3 columnas en pantallas grandes, luego se adapta */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* cada item se comporta como bloque y coge toda la altura */
+app-habilidad-component {
+  display: block;
+}
