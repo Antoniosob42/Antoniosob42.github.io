@@ -1,0 +1,14 @@
+<div class="habilidad-card">
+  <span class="nombre">{{ nombre() }}</span>
+  <div class="estrellas">
+    @for (star of stars; track $index) {
+      @if (star === 'full') {
+        <i class="fas fa-star"></i>
+      } @else if (star === 'half') {
+        <i class="fas fa-star-half-alt"></i>
+      } @else {
+        <i class="far fa-star"></i>
+      }
+    }
+  </div>
+</div>

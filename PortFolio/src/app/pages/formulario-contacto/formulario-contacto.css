@@ -1,0 +1,94 @@
+/* Contenedor del formulario */
+form {
+  background-color: #111;        /* fondo oscuro */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #f1f1f1;                /* texto claro */
+}
+
+/* Cada grupo de input */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+/* Etiquetas */
+label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #f1f1f1;                /* texto claro */
+  font-size: 1rem;
+}
+
+.asterisco {
+  color: #e74c3c; /* rojo vivo */
+  margin-left: 0.25rem;
+  font-weight: bold;
+}
+
+/* Inputs y textarea */
+input, textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #444;         /* borde gris oscuro */
+  border-radius: 6px;
+  background-color: #222;         /* fondo input oscuro */
+  color: #f1f1f1;                 /* texto claro */
+  font-size: 1rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;                   /* placeholder gris claro */
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0e76a8;          /* azul al foco */
+  background-color: #1a1a1a;      /* un pelín más oscuro */
+}
+
+/* Mensajes de error */
+.error {
+  color: #e74c3c;                 /* rojo vivo */
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+/* Botón de enviar */
+input[type="submit"] {
+  padding: 0.75rem 1.5rem;
+  background-color: #0e76a8;      /* azul LinkedIn */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #095c82;
+  transform: scale(1.03);
+}
+textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: #f1f1f1;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+
+  /* 🔹 controla el resize */
+  resize: vertical;         /* solo permite agrandar en altura */
+  max-width: 100%;          /* nunca se pasa del contenedor */
+  box-sizing: border-box;   /* incluye padding en el cálculo */
+  min-height: 100px;        /* alto mínimo */
+}

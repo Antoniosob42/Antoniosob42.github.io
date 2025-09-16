@@ -12,6 +12,7 @@ export class BotonComponente {
   public urlRedireccion: InputSignal<string> = input.required<string>();
   public labelBoton: InputSignal<string> = input<string>('');
   public colorFondo: InputSignal<string> = input<string>(''); // 👈 nuevo
+  public tamano: InputSignal<number | null|undefined> = input<number | null>();
 
   constructor( private navigationService: NavigationService) {}
 
@@ -31,7 +32,6 @@ export class BotonComponente {
     return !!img && img.includes('fa-');
   }
   getTextColor(fondo: string): string {
-  // cálculo simple de luminosidad
   const c = fondo.startsWith('#') ? fondo.slice(1) : fondo;
   if (c.length === 6) {
     const r = parseInt(c.slice(0,2),16);

@@ -2,6 +2,7 @@
   background-color: #0a0a0a;
   color: #fff;
   padding: 1rem 2rem;
+  height: 20px;
 }
 
 .footer-content {
@@ -37,6 +38,7 @@
   cursor: pointer;
   font-weight: 500;
   transition: color 0.3s ease;
+  padding-right: 5%;
 }
 
 .contact i {
@@ -45,4 +47,12 @@
 
 .contact:hover {
   color: #0e76a8;
+}
+.aviso-angular {
+  font-size: 0.75rem;     /* texto pequeño */
+  color: inherit;         /* usa el color ya definido (por ejemplo #fff) */
+  text-align: center;
+  margin: 0 1rem;         /* separación lateral ligera */
+  align-self: flex-end;   /* lo coloca visualmente hacia abajo dentro del flex */
+  line-height: 1;         /* evita saltos de línea extra */
 }

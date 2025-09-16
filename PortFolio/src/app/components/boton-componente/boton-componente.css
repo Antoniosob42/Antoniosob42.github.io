@@ -1,29 +1,60 @@
-/* Botón solo icono */
+/* ====== Botón solo icono (para imagen o icono) ====== */
 .icon-button {
-  background: transparent; /* transparente para no tapar imagen/fondo */
-  border: none;
+  background: transparent;
+  border: 3px solid black; /* borde negro para la foto */
   cursor: pointer;
-  padding: 0; /* ajustado a 0 para que la imagen quede exacta */
+  padding: 0;              /* eliminamos padding para que la imagen ocupe todo */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: transform 0.2s ease;
+  width: 160px;            /* tamaño grande del botón */
+  height: 160px;
+  overflow: hidden;        /* recorta la imagen si sobra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .icon-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
 
-/* Imagen dentro del botón */
+/* Imagen dentro del botón ocupa todo el botón */
 .button-image {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-/* FontAwesome */
+/* FontAwesome icon */
 i {
-  font-size: 1.8rem;
-  /* color definido en línea: style="color:white;" */
+  font-size: 2.5rem; /* más grande para el header */
+  color: inherit;
+}
+
+/* ====== Botón normal estilo profesional ====== */
+.general-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.general-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Texto dentro del botón */
+.button-label {
+  margin: 0;
 }
