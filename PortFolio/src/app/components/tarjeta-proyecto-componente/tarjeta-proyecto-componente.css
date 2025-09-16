@@ -1,30 +1,75 @@
+/* === Tarjeta moderna === */
 .tarjeta-proyecto {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
   padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fff;
-  max-width: 300px;
+  border-radius: 12px;
+  background-color: #111;          /* fondo negro */
+  width: 300px;
+  min-height: 400px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  color: #fff;                     /* texto blanco */
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
 }
 
+.tarjeta-proyecto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Imagen del proyecto */
 .imagen-proyecto {
   width: 100%;
-  height: 150px;
+  height: 160px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 8px;
+  border: 2px solid #333;          /* borde sutil */
 }
 
+/* Nombre del proyecto */
+.tarjeta-proyecto h2:first-of-type {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffcc00;                  /* color llamativo */
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Descripción del proyecto */
+.tarjeta-proyecto h2:nth-of-type(2) {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ddd;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Tecnologías */
 .tecnologias {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  gap: 0.4rem;
+  margin-top: auto; /* empuja el botón hacia abajo */
 }
 
 .tecnologia {
-  background: #eee;
+  background: #222;              /* oscuro para contraste */
+  color: #ffcc00;                /* texto llamativo */
   padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Botón componente al final */
+.tarjeta-proyecto app-boton-componente {
+  margin-top: 0.75rem;
+  align-self: flex-start;
 }

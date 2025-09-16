@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background: linear-gradient(270deg, #1a1a1a, #333, #1a1a1a);
+  background-size: 600% 600%;
+  animation: fondoAnimado 20s ease infinite;
+}
+
+@keyframes fondoAnimado {
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Área de contenido con padding inferior igual a la altura del footer */
+.main-content {
+  flex: 1;
+  padding-bottom: 80px; /* 👈 ajusta a la altura real del footer */
+  box-sizing: border-box;
+}
+
+/* Footer fijo */
+app-footer,
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px; /* 👈 altura del footer */
+  z-index: 999;
+}

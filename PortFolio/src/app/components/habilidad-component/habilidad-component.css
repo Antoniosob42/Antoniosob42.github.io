@@ -1,0 +1,40 @@
+.habilidad-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #111; /* fondo oscuro */
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+
+  /* 🔹 Altura fija para que TODAS midan lo mismo */
+  height: 70px;  /* puedes subir a 80 o 100 si tienes más texto */
+  box-sizing: border-box;
+}
+
+.habilidad-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.nombre {
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Estrellas */
+.estrellas {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.estrellas i {
+  color: #f1c40f; /* dorado */
+  font-size: 1.2rem;
+}

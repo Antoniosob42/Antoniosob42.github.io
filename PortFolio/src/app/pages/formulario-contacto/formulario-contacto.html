@@ -1,0 +1,63 @@
+<form [formGroup]="formularioContacto" (ngSubmit)="enviar()">
+  <!-- Nombre -->
+  <div class="form-group">
+    <label for="nombre">
+      Nombre
+      @if (campoInvalido('nombre')) {
+        <span class="asterisco">*</span>
+      }
+    </label>
+    <input formControlName="nombre" type="text" placeholder="Nombre">
+    @if (campoInvalido('nombre')) {
+      <p class="error">
+        @if (formularioContacto.controls['nombre'].errors?.['required']) {
+          El nombre es obligatorio.
+        } @else if (formularioContacto.controls['nombre'].errors?.['minlength']) {
+          El nombre debe tener al menos 3 caracteres.
+        }
+      </p>
+    }
+  </div>
+
+  <!-- Email -->
+  <div class="form-group">
+    <label for="email">
+      Email
+      @if (campoInvalido('email')) {
+        <span class="asterisco">*</span>
+      }
+    </label>
+    <input formControlName="email" type="email" placeholder="Email">
+    @if (campoInvalido('email')) {
+      <p class="error">
+        @if (formularioContacto.controls['email'].errors?.['required']) {
+          El email es obligatorio.
+        } @else if (formularioContacto.controls['email'].errors?.['email']) {
+          El formato del email no es válido.
+        }
+      </p>
+    }
+  </div>
+
+  <!-- Mensaje -->
+  <div class="form-group">
+    <label for="mensaje">
+      Mensaje
+      @if (campoInvalido('mensaje')) {
+        <span class="asterisco">*</span>
+      }
+    </label>
+    <textarea formControlName="mensaje" placeholder="Mensaje"></textarea>
+    @if (campoInvalido('mensaje')) {
+      <p class="error">
+        @if (formularioContacto.controls['mensaje'].errors?.['required']) {
+          El mensaje es obligatorio.
+        } @else if (formularioContacto.controls['mensaje'].errors?.['minlength']) {
+          El mensaje debe tener al menos 25 caracteres.
+        }
+      </p>
+    }
+  </div>
+
+  <input type="submit" value="ENVIAR">
+</form>
