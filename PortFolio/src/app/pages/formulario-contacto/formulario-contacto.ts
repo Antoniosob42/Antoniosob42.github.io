@@ -11,14 +11,16 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class FormularioContacto {
   private _fb = inject(FormBuilder);
-  private emailPersonal:string="antoniosobrinomartin@gmail.com"
+
+  // tu email destino privado
+  private emailPersonal: string = 'antoniosobrinomartin@gmail.com';
+
   formularioContacto: FormGroup = this._fb.group({
     nombre: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],
     mensaje: ['', [Validators.required, Validators.minLength(25)]]
   });
 
-  // Método auxiliar para saber si un campo está inválido y tocado
   campoInvalido(campo: string): boolean {
     const control = this.formularioContacto.get(campo);
     return !!control && control.invalid && (control.touched || control.dirty);
@@ -26,12 +28,21 @@ export class FormularioContacto {
 
   enviar() {
     if (this.formularioContacto.invalid) {
-      // marca todos como tocados para que se muestren los errores
       this.formularioContacto.markAllAsTouched();
       return;
     }
 
-    console.log(this.formularioContacto.value);
+    // Creamos el objeto JSON con tus claves personalizadas
+    const datos = {
+      nombre_remitente: this.formularioContacto.value.nombre,
+      email_remitente: this.formularioContacto.value.email,
+      mensaje_remitente: this.formularioContacto.value.mensaje,
+      email_destinatario: this.emailPersonal
+    };
+
+    // Aquí ya tienes el JSON que puedes enviar por HTTP o mostrar
+    console.log('JSON para enviar:', datos);
+
     alert('Formulario enviado con éxito');
     this.formularioContacto.reset();
   }
