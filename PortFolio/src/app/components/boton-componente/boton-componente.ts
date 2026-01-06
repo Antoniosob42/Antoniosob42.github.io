@@ -23,7 +23,7 @@ export class BotonComponente {
         window.open(r, '_blank');
       } else {
         this.navigationService.navigateTo(r);
-      }
+      }      
     }
   }
 

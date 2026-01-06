@@ -1,5 +1,8 @@
 <div class="habilidad-card">
-  <span class="nombre">{{ nombre() }}</span>
+  <div class="contenedor-nombre">
+    <span class="nombre">{{ nombre() }}</span>
+    <span class="tooltip-text">{{ nombre() }}</span>
+  </div>
   <div class="estrellas">
     @for (star of stars; track $index) {
       @if (star === 'full') {

@@ -3,21 +3,29 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1rem;
-  background-color: #111; /* fondo oscuro */
+  background-color: #111;
   border-radius: 8px;
   color: #fff;
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: default;
-
-  /* 🔹 Altura fija para que TODAS midan lo mismo */
-  height: 70px;  /* puedes subir a 80 o 100 si tienes más texto */
+  height: 70px; 
   box-sizing: border-box;
+  overflow: hidden; 
+}
+
+.contenedor-nombre {
+  position: relative; 
+  flex: 1; 
+  min-width: 0;
+  margin-right: 1rem;
+  overflow: hidden; 
 }
 
 .habilidad-card:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 10;
 }
 
 .nombre {
@@ -26,15 +34,61 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  display: block;
 }
 
-/* Estrellas */
+.tooltip-text {
+  position: absolute;
+  top: 120%; 
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: normal;
+  width: max-content; 
+  max-width: 200px;   
+  font-size: 0.9rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 20;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px); 
+  transition-delay: 1s;
+  pointer-events: none; 
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%; 
+  left: 10px;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+}
+
+.habilidad-card:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.habilidad-card:not(:hover) .tooltip-text {
+  transition-delay: 0s;
+}
+
 .estrellas {
   display: flex;
   gap: 0.2rem;
+  flex-shrink: 0; 
+  white-space: nowrap; 
 }
 
 .estrellas i {
-  color: #f1c40f; /* dorado */
+  color: #f1c40f;
   font-size: 1.2rem;
 }

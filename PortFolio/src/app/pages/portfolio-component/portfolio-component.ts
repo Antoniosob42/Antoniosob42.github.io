@@ -12,46 +12,18 @@ import { TarjetaProyectoComponente } from '../../components/tarjeta-proyecto-com
 export class PortfolioComponent {
   proyectos: Proyecto[] = [
     {
-      nombre: 'Mi primer proyecto',
-      descripcion: 'Descripción breve del proyecto',
-      tecnologias: ['Angular', 'TypeScript', 'CSS'],
-      imagen: 'assets/proyecto1.jpg',
-      urlGithub: 'https://github.com/tuusuario/proyecto1'
+      nombre: 'Stocker',
+      descripcion: 'Proyecto de gestión de inventarios y consulta de productos. Hecho en Kotlin para Android.',
+      tecnologias: ['Kotlin', 'Java', 'Firebase', 'Android'],
+      imagen: 'assets/st.png',
+      urlGithub: 'https://github.com/Antoniosob42/STOCKER'
     },
     {
-      nombre: 'Mi segundo proyecto',
-      descripcion: 'Otro proyecto interesante',
-      tecnologias: ['Node', 'Express', 'MongoDB'],
-      imagen: 'assets/proyecto2.jpg',
-      urlGithub: 'https://github.com/tuusuario/proyecto2'
-    },
-      {
-      nombre: 'Mi tercer proyecto',
-      descripcion: 'Otro proyecto interesante',
-      tecnologias: ['Node', 'Express', 'MongoDB'],
-      imagen: 'assets/proyecto3.jpg',
-      urlGithub: 'https://github.com/tuusuario/proyecto3'
-    },
-     {
-      nombre: 'Mi primer proyecto',
-      descripcion: 'Descripción breve del proyecto',
-      tecnologias: ['Angular', 'TypeScript', 'CSS'],
-      imagen: 'assets/proyecto1.jpg',
-      urlGithub: 'https://github.com/tuusuario/proyecto1'
-    },
-    {
-      nombre: 'Mi segundo proyecto',
-      descripcion: 'Otro proyecto interesante',
-      tecnologias: ['Node', 'Express', 'MongoDB'],
-      imagen: 'assets/proyecto2.jpg',
-      urlGithub: 'https://github.com/tuusuario/proyecto2'
-    },
-      {
-      nombre: 'Mi tercer proyecto',
-      descripcion: 'Otro proyecto interesante',
-      tecnologias: ['Node', 'Express', 'MongoDB'],
-      imagen: 'assets/proyecto3.jpg',
-      urlGithub: 'https://github.com/tuusuario/proyecto3'
+      nombre: 'El ahorcado',
+      descripcion: 'El juego del ahorcado desarrollado en Angular',
+      tecnologias: ['Angular', 'TypeScript', 'HTML', 'CSS'],
+      imagen: 'assets/ao.png',
+      urlGithub: 'https://github.com/Antoniosob42/JuegoAhorcado'
     }
   ];
 }
